@@ -1,0 +1,444 @@
+/*!
+Theme Name: awcreations2
+Theme URI: http://localhost/wordpress/wordpress/wp-admin/themes.php?theme=awcreations
+Author: Amanda Welch Creations
+Author URI: https://datcmedia.com/welcha/wordpress/
+Description: Hi. I'm a starter theme called <code>awcreations</code>.
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: awcreations
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+awcreations is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "inc/wordpress";
+
+/*! Amanda Welch Style */
+
+$color1: #ff5908;
+$color2: #019981;
+$color3: #c44202;
+$color4: #8c0500;
+$color5: #01695a;
+$color6: #fff;
+$color7: #000;
+$color8: #333;
+$color9: #aaa;
+
+* {
+    font-family: "Century Gothic Pro", "Source Sans Pro", sans-serif;
+} 
+
+a {
+    text-decoration: none;
+    &:hover {
+        color: $color4;
+    }
+}
+
+.entry-content p a {
+    color: $color2;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px $color9;
+    &:hover {
+        color: $color5;
+    }
+}
+
+html { 
+    background-color: #eee;
+}
+
+//hr
+.wp-block-separator {
+    background-color: $color8;
+    border-bottom: 0px solid $color6;
+    width: 60%;
+}
+
+body, .page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, p, a{
+    color: $color8;
+}
+
+.entry-content p {
+    @media screen AND (min-width:600px) {
+        font-size: 1.1em;
+    } 
+}
+
+//header, nav
+.custom-logo {
+    height: 5em;
+}
+
+.site-header {
+    align-items: center;
+    display: flex;
+    margin: 0 auto 0 0;
+    padding: 1em;
+    width: 95%;
+    
+    @media screen AND (min-width:1024px) {
+        padding: 1em 3em;
+    }
+}
+
+.main-navigation {
+    margin-left: 1em;
+}
+
+.menu-toggle {
+    background-color: $color2;
+    border: 1px solid $color2;
+    border-radius: 20px;
+    color: $color6;
+    float: right;
+    margin-right: 0;
+    padding-bottom: .75em;
+    width: 5em;
+    z-index: 0;
+    &:hover {
+        background-color: $color5;
+        border: 1px solid $color5;
+    }
+    &:active {
+        background-color: $color6;
+        color: $color2;
+    }
+}
+
+.nav-menu {
+    float: right;
+    position: absolute;
+    top: 7.3em; 
+    right: 1.9em;
+    text-align: left;
+    z-index: 2;
+    @media screen AND (min-width:600px) {
+        position: initial;
+    }
+}
+
+.menu-item {
+    background-color: $color2;
+    padding: .25em .5em;
+    text-shadow: 1px 1px 3px $color8;
+    a {
+        color: $color6;
+        @media screen AND (min-width:1024px) {
+            font-size: 1.2em;
+        }
+    }
+    &:hover {
+        background-color: $color5;
+    }
+}  
+
+#menu-item-11 {
+    border-radius: 20px 20px 0 0;
+    padding-top: .5em;
+    @media screen AND (min-width:600px) {
+    border-radius: 20px 0 0 20px;
+    padding-top: .25em;
+    padding-left: 1em;
+    }
+}
+
+#menu-item-169 {
+    border-radius:  0 0 20px 20px;
+    padding-right: 1em;
+    @media screen AND (min-width:600px) {
+    border-radius: 0 20px 20px 0;
+    }
+}
+
+//homepage H1 "HOME"
+.home .entry-header {
+    display: none;
+}
+
+//hero
+.hero-img {
+    margin: 0;
+    max-width: 1200px;
+}
+
+.entry-content {
+    margin-top: 0;
+}
+
+.home h1 {
+    background-color: $color2;
+    color: $color6;
+    margin: -.22em 0 0 0;
+    text-align: center;
+    width: 100%;
+    span {
+        display: block;
+    }
+    @media screen AND (max-width: 600px) {
+        font-size: 1.6em;
+    } 
+}
+
+.wp-container-1 h1, h2 {
+    text-shadow: 1px 1px 3px $color8;
+}
+
+//CTAs
+.wp-container-3 {
+    gap: 1em !important;
+    .wp-block-button__link {
+        border-radius: 100px;
+    }
+    @media screen AND (min-width: 600px) {
+        gap: 3em !important;
+    }
+    @media screen AND (min-width:1024px) {
+        gap: 5em !important;
+    }
+}
+
+.wp-block-button__link {
+    background-color: $color1;
+    border-radius: 200px; 
+    text-shadow: 1px 1px 3px $color8;
+    &:hover {
+        background-color: $color3;
+    }
+    @media screen AND (min-width: 600px) {
+        &:active {
+        font-size: 1.25em;    
+        }
+    }
+    @media screen AND (min-width:1024px) {
+        font-size: 1.2em;
+    }
+}
+
+h2 {
+    background-color: $color2;
+    color: $color6;
+    padding-left: 1em;
+    margin-right: 1em;
+    @media screen AND (min-width: 600px) {
+        padding-left: 2em;
+        margin-right: 2em;
+    }
+    @media screen AND (min-width:1024px) {
+        padding-left: 3em;
+        margin-right: 3em;
+    }
+}
+
+//margin
+h1, h3, h4, p, .site-info, .wp-container-6 .wp-block-button__link {
+    margin: auto 1em;
+    @media screen AND (min-width: 600px) {
+        margin: auto 3em;
+    }
+    @media screen AND (min-width:1024px) {
+        margin: auto 4.5em;
+    }
+}
+
+//footer social icons
+.wp-container-10 {
+    display: flex;
+    gap: 1em !important;
+    justify-content: center; 
+    margin-top: 1em;
+} 
+
+//copy
+.site-info {
+    padding-bottom: 1em;
+    text-align: center;
+    @media screen AND (min-width:1024px) {
+        font-size: 1.2em;
+    }
+}
+
+//footer
+.entry-footer {
+    display: none; 
+}
+
+hr {
+    background-color: $color9;
+    width: 90%;
+}
+
+.site-footer p a {
+    padding: .25em;
+    margin: .5em auto;
+    @media screen AND (min-width: 650px) {
+        padding: .5em 1em;
+    }
+    &:hover {
+        background-color: $color8;
+        border-radius: 20px;
+        color: $color6;
+    }
+    &:visited {
+        color: $color4;
+    }
+} 
+
+//about
+.wp-block-media-text {
+    margin: auto 1em;
+    p {
+    margin-top: .5em;
+    }
+    @media screen AND (min-width: 600px) {
+        margin: auto 2em; 
+    }
+} 
+
+.wp-image-121 {
+    margin: auto 1em;
+    @media screen AND (min-width: 600px) {
+        margin: auto 2em; 
+    }
+    @media screen AND (min-width:1024px) {
+        margin: auto 4em auto 1em;
+    }
+} 
+
+blockquote p {
+    margin: .5em;
+}
+
+.wp-image-47 {
+    margin-left: 1.5em;
+    @media screen AND (min-width:1024px) {
+        margin-left: 2.5em;
+    }
+}
+
+.wp-block-file {
+    margin: 1.5em 5em;
+    .wp-block-file__button {
+        background-color: $color1;
+        text-shadow: 1px 1px 3px $color8;
+        &:hover {
+            background-color: $color3;
+        }
+        @media screen AND (min-width: 600px) {
+            &:active {
+            font-size: .85em;    
+            }
+        }
+    }
+}
+
+//blog page
+.post h2 a {
+    color: $color6;
+    &:hover {
+        color: $color4;
+    }
+}
+
+.entry-meta {
+    margin: auto 1em;
+    
+    @media screen AND (min-width:1024px) {
+        margin: auto 4.5em;
+    }
+}
+
+.post img {
+    margin: auto 2.25em 2em 4.5em;
+    float: left;
+    width: 40%;
+}
+
+.wp-block-search {
+    margin: auto 2em;
+    @media screen AND (min-width: 600px) {
+        margin: auto 3em;
+    }
+}
+
+.nav-links {
+    margin: auto .5em;
+}
+
+
+//contact page
+.wp-image-122 {
+    margin-bottom: 1em;
+    max-width: 1200px;
+}
+
+form p {
+    margin-bottom: 1em;
+}
+
+.wpcf7-textarea {
+    width: 50%;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    border: 0px;
+    border-radius: 100px;
+    background-color: $color1;
+    color: $color6;
+    padding-bottom: .7em;
+    text-shadow: 1px 1px 3px $color8;
+    &:hover {
+        background-color: $color3; 
+        @media screen AND (min-width: 600px) {
+            &:active {
+                font-size: 1em; 
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
